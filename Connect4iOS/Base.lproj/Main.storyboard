@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="o9z-C6-xa8">
+    <device id="retina6_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="AUg-x0-8DX">
+            <objects>
+                <navigationController id="o9z-C6-xa8" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ylr-DJ-s7f">
+                        <rect key="frame" x="0.0" y="44" width="428" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" systemColor="systemOrangeColor"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="hBs-dJ-3xA" kind="relationship" relationship="rootViewController" id="Wxv-SF-2Wa"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wjh-cl-OFk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="277" y="108"/>
+        </scene>
+        <!--Main Menu-->
+        <scene sceneID="1Lt-Aa-xWr">
+            <objects>
+                <viewController id="hBs-dJ-3xA" customClass="MainMenuController" customModule="Connect4iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fc5-ia-5IH">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="64" translatesAutoresizingMaskIntoConstraints="NO" id="ARy-FS-GgG">
+                                <rect key="frame" x="32" y="152" width="364" height="492"/>
+                                <subviews>
+                                    <button opaque="NO" tag="71" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Etp-lZ-eCN">
+                                        <rect key="frame" x="0.0" y="0.0" width="364" height="121.33333333333333"/>
+                                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="20"/>
+                                        <state key="normal" title="HUMAN VS HUMAN">
+                                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="eiE-LC-3og" kind="show" id="O0t-eW-gsJ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nRY-ND-iWm">
+                                        <rect key="frame" x="0.0" y="185.33333333333331" width="364" height="121.33333333333331"/>
+                                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="20"/>
+                                        <state key="normal" title="HUMAN VS AI">
+                                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="humanVsAiButton:" destination="hBs-dJ-3xA" eventType="touchUpInside" id="8kz-di-V5w"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="51z-Ch-reO">
+                                        <rect key="frame" x="0.0" y="370.66666666666663" width="364" height="121.33333333333331"/>
+                                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="20"/>
+                                        <state key="normal" title="AI VS AI">
+                                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="aiVsAiButton:" destination="hBs-dJ-3xA" eventType="touchUpInside" id="nfb-gO-vbM"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="mgI-70-wb6"/>
+                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                        <constraints>
+                            <constraint firstItem="mgI-70-wb6" firstAttribute="bottom" secondItem="ARy-FS-GgG" secondAttribute="bottom" constant="248" id="01T-6F-vXM">
+                                <variation key="heightClass=compact-widthClass=compact" constant="64"/>
+                            </constraint>
+                            <constraint firstItem="mgI-70-wb6" firstAttribute="trailing" secondItem="ARy-FS-GgG" secondAttribute="trailing" constant="32" id="bbq-28-ExF">
+                                <variation key="heightClass=compact-widthClass=compact" constant="128"/>
+                            </constraint>
+                            <constraint firstItem="ARy-FS-GgG" firstAttribute="top" secondItem="mgI-70-wb6" secondAttribute="top" constant="64" id="fCc-eW-qSy"/>
+                            <constraint firstItem="ARy-FS-GgG" firstAttribute="leading" secondItem="mgI-70-wb6" secondAttribute="leading" constant="32" id="oyt-70-6FP">
+                                <variation key="heightClass=compact-widthClass=compact" constant="128"/>
+                            </constraint>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Main Menu" leftItemsSupplementBackButton="YES" id="IIf-bx-DwF">
+                        <barButtonItem key="backBarButtonItem" title=" " id="U2H-49-GrM"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="mainMenu" destination="ARy-FS-GgG" id="1yn-gW-wsf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SsS-EI-dcL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1052" y="108"/>
+        </scene>
+        <!--Main Menu-->
+        <scene sceneID="krW-JP-f3Q">
+            <objects>
+                <viewController id="eiE-LC-3og" customClass="GameViewController" customModule="Connect4iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="orp-VC-xx0">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="OnK-OA-KIv">
+                                <rect key="frame" x="0.0" y="100" width="428" height="794"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="gvc-KI-9F6">
+                                        <rect key="frame" x="48" y="0.0" width="332" height="393"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" tag="101" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player 1 wins: 0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kvx-Vx-d1D">
+                                                <rect key="frame" x="0.0" y="0.0" width="332" height="124.33333333333333"/>
+                                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="17"/>
+                                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" tag="102" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player 2 wins: 0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7bT-qx-2Vo">
+                                                <rect key="frame" x="0.0" y="134.33333333333334" width="332" height="124.33333333333334"/>
+                                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="17"/>
+                                                <color key="textColor" systemColor="systemOrangeColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="48" translatesAutoresizingMaskIntoConstraints="NO" id="utT-3M-zXH">
+                                                <rect key="frame" x="0.0" y="268.66666666666669" width="332" height="124.33333333333331"/>
+                                                <subviews>
+                                                    <button opaque="NO" tag="103" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g9F-Cc-TZU">
+                                                        <rect key="frame" x="0.0" y="0.0" width="142" height="124.33333333333333"/>
+                                                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="20"/>
+                                                        <state key="normal" title="CLEAR BOARD">
+                                                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="clearBoardButton:" destination="eiE-LC-3og" eventType="touchUpInside" id="vWt-1e-iBC"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="104" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ulX-Qn-aJ5">
+                                                        <rect key="frame" x="190" y="0.0" width="142" height="124.33333333333333"/>
+                                                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="20"/>
+                                                        <state key="normal" title="NEW GAME">
+                                                            <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="newGameButton:" destination="eiE-LC-3og" eventType="touchUpInside" id="A6J-UK-Oc6"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <variation key="heightClass=compact" axis="horizontal"/>
+                                            </stackView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="Kvx-Vx-d1D" firstAttribute="leading" secondItem="gvc-KI-9F6" secondAttribute="leading" id="P3m-c5-Kha"/>
+                                            <constraint firstItem="Kvx-Vx-d1D" firstAttribute="top" secondItem="gvc-KI-9F6" secondAttribute="top" id="qcc-eI-iLt"/>
+                                            <constraint firstAttribute="trailing" secondItem="Kvx-Vx-d1D" secondAttribute="trailing" id="ydx-5P-aJ7"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="fHO-ZL-sO0">
+                                        <rect key="frame" x="17.666666666666657" y="401" width="393" height="393"/>
+                                        <color key="backgroundColor" red="0.63070096674653675" green="0.4138031180284435" blue="0.16744023550011525" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="fHO-ZL-sO0" secondAttribute="height" multiplier="1:1" id="vYj-bF-0pc"/>
+                                        </constraints>
+                                        <edgeInsets key="layoutMargins" top="20" left="20" bottom="20" right="20"/>
+                                    </stackView>
+                                </subviews>
+                                <variation key="heightClass=compact" axis="horizontal"/>
+                                <variation key="heightClass=regular-widthClass=regular" axis="horizontal"/>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="b3q-bh-NkL"/>
+                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="OnK-OA-KIv" secondAttribute="bottom" constant="32" id="0Wg-0z-uyC">
+                                <variation key="heightClass=compact-widthClass=regular" constant="0.0"/>
+                            </constraint>
+                            <constraint firstItem="OnK-OA-KIv" firstAttribute="top" secondItem="b3q-bh-NkL" secondAttribute="top" constant="12" id="18w-Vd-nGI">
+                                <variation key="heightClass=compact-widthClass=regular" constant="0.0"/>
+                            </constraint>
+                            <constraint firstItem="OnK-OA-KIv" firstAttribute="trailing" secondItem="b3q-bh-NkL" secondAttribute="trailing" id="DQi-PH-gmJ"/>
+                            <constraint firstItem="OnK-OA-KIv" firstAttribute="leading" secondItem="orp-VC-xx0" secondAttribute="leading" id="gSd-7E-P6g">
+                                <variation key="heightClass=compact-widthClass=regular" constant="48"/>
+                            </constraint>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Main Menu" id="v63-7L-mhu"/>
+                    <connections>
+                        <outlet property="GameBoard" destination="fHO-ZL-sO0" id="Ffg-VU-ZOV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DHd-3m-CIg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1800.0000000000002" y="107.8125"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
